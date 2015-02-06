@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>SurveyMonkeyiOSSDK</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+                
+				<Node>
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="5"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
+				<Node>
+					<Name>Constants</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="6"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
+                <Node>
+                    <Name>Blocks</Name>
+                    <Path>index.html</Path>
+                    <Subnodes>
+                        <NodeRef refid="7"/>
+                        
+                    </Subnodes>
+                </Node>
+                
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1" type="file" documentType="reference">
+            <Name>SMAnswerResponse</Name>
+            <Path>Classes/SMAnswerResponse.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/SMAnswerResponse.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/SMAnswerResponse.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/SMAnswerResponse.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
+            <Name>SMFeedbackViewController</Name>
+            <Path>Classes/SMFeedbackViewController.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/SMFeedbackViewController.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/SMFeedbackViewController.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/SMFeedbackViewController.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/SMFeedbackViewController.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="3" type="file" documentType="reference">
+            <Name>SMQuestionResponse</Name>
+            <Path>Classes/SMQuestionResponse.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/SMQuestionResponse.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/SMQuestionResponse.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/SMQuestionResponse.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="4" type="file" documentType="reference">
+            <Name>SMRespondent</Name>
+            <Path>Classes/SMRespondent.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/SMRespondent.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/SMRespondent.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/SMRespondent.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		
+		
+        <Node id="5" type="file" documentType="reference">
+            <Name>SMFeedbackDelegate</Name>
+            <Path>Protocols/SMFeedbackDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/SMFeedbackDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/SMFeedbackDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/SMFeedbackDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		
+        <Node id="6" type="file" documentType="reference">
+            <Name>SMCompletionStatus</Name>
+            <Path>Constants/SMCompletionStatus.html</Path>
+            
+        </Node>
+		
+        <Node id="7" type="file" documentType="reference">
+            <Name>SMRequestHandler</Name>
+            <Path>Blocks/SMRequestHandler.html</Path>
+            
+        </Node>
+        
+	</Library>
+</DocSetNodes>

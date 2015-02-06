@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SMFeedbackViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SMFeedbackViewController</TokenIdentifier>
+			<Abstract type="html">Use the SMFeedbackViewController class to present a survey to the user.</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMFeedbackViewController/initWithSurvey:</TokenIdentifier>
+			<Abstract type="html">Initialize the feedback view controller with the collectorHash from your Mobile SDK Collector</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithSurvey:(NSString *)collectorHash</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>collectorHash</Name>
+					<Abstract type="html">The collector hash that points to your Mobile SDK Collector</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithSurvey:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMFeedbackViewController/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The receiver’s delegate or nil if it doesn’t have a delegate.</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SMFeedbackDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMFeedbackViewController/delegate</TokenIdentifier>
+			<Abstract type="html">The receiver’s delegate or nil if it doesn’t have a delegate.</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SMFeedbackDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMFeedbackViewController/delegate</TokenIdentifier>
+			<Abstract type="html">The receiver’s delegate or nil if it doesn’t have a delegate.</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SMFeedbackDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMFeedbackViewController/presentFromViewController:animated:completion:</TokenIdentifier>
+			<Abstract type="html">Display the SMFeedbackViewController to the user.</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)presentFromViewController:(UIViewController *)viewController animated:(BOOL)flag completion:(void ( ^ ) ( void ))completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller from which to launch the SMFeedbackViewController</Abstract>
+				</Parameter><Parameter>
+					<Name>flag</Name>
+					<Abstract type="html">Pass YES to animate the presentation; otherwise, pass NO.</Abstract>
+				</Parameter><Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">The block to execute after the presentation finishes. This block has no return value and takes no parameters. You may specify nil for this parameter.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/presentFromViewController:animated:completion:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

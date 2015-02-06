@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/SMCompletionStatus.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/SMCompletionStatus</TokenIdentifier>
+			<Abstract type="html">An enumeration for the two possible survey completion statuses</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SMCompletionStatusPartiallyComplete</TokenIdentifier>
+            <Abstract type="html">Survey completion status for when a survey has been only partially completed by the user.
+     </Abstract>
+            <Declaration>SMCompletionStatusPartiallyComplete</Declaration>
+            
+            <DeclaredIn>SMRespondent.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SMCompletionStatusComplete</TokenIdentifier>
+            <Abstract type="html">Survey completion status for when a survey has been completed by the user.
+     </Abstract>
+            <Declaration>SMCompletionStatusComplete</Declaration>
+            
+            <DeclaredIn>SMRespondent.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

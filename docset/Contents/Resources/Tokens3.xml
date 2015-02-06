@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SMQuestionResponse.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SMQuestionResponse</TokenIdentifier>
+			<Abstract type="html">The SMQuestionResponse object represents a complete response to a given survey question</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/setPageID:</TokenIdentifier>
+			<Abstract type="html">ID of page where this question is located</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *pageID</Declaration>
+			
+			
+			<Anchor>//api/name/pageID</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/pageID</TokenIdentifier>
+			<Abstract type="html">ID of page where this question is located</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *pageID</Declaration>
+			
+			
+			<Anchor>//api/name/pageID</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMQuestionResponse/pageID</TokenIdentifier>
+			<Abstract type="html">ID of page where this question is located</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *pageID</Declaration>
+			
+			
+			<Anchor>//api/name/pageID</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/setPageIndex:</TokenIdentifier>
+			<Abstract type="html">Index of page where this question is located (starting at 0)</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger pageIndex</Declaration>
+			
+			
+			<Anchor>//api/name/pageIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/pageIndex</TokenIdentifier>
+			<Abstract type="html">Index of page where this question is located (starting at 0)</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger pageIndex</Declaration>
+			
+			
+			<Anchor>//api/name/pageIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMQuestionResponse/pageIndex</TokenIdentifier>
+			<Abstract type="html">Index of page where this question is located (starting at 0)</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger pageIndex</Declaration>
+			
+			
+			<Anchor>//api/name/pageIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/setQuestionID:</TokenIdentifier>
+			<Abstract type="html">ID of question that was answered</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *questionID</Declaration>
+			
+			
+			<Anchor>//api/name/questionID</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/questionID</TokenIdentifier>
+			<Abstract type="html">ID of question that was answered</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *questionID</Declaration>
+			
+			
+			<Anchor>//api/name/questionID</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMQuestionResponse/questionID</TokenIdentifier>
+			<Abstract type="html">ID of question that was answered</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *questionID</Declaration>
+			
+			
+			<Anchor>//api/name/questionID</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/setQuestionSurveyIndex:</TokenIdentifier>
+			<Abstract type="html">Global index of question in survey</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger questionSurveyIndex</Declaration>
+			
+			
+			<Anchor>//api/name/questionSurveyIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/questionSurveyIndex</TokenIdentifier>
+			<Abstract type="html">Global index of question in survey</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger questionSurveyIndex</Declaration>
+			
+			
+			<Anchor>//api/name/questionSurveyIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMQuestionResponse/questionSurveyIndex</TokenIdentifier>
+			<Abstract type="html">Global index of question in survey</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger questionSurveyIndex</Declaration>
+			
+			
+			<Anchor>//api/name/questionSurveyIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/setQuestionPageIndex:</TokenIdentifier>
+			<Abstract type="html">Index of question within its page (starting at 0)</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger questionPageIndex</Declaration>
+			
+			
+			<Anchor>//api/name/questionPageIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/questionPageIndex</TokenIdentifier>
+			<Abstract type="html">Index of question within its page (starting at 0)</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger questionPageIndex</Declaration>
+			
+			
+			<Anchor>//api/name/questionPageIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMQuestionResponse/questionPageIndex</TokenIdentifier>
+			<Abstract type="html">Index of question within its page (starting at 0)</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger questionPageIndex</Declaration>
+			
+			
+			<Anchor>//api/name/questionPageIndex</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/setQuestionValue:</TokenIdentifier>
+			<Abstract type="html">Question Prompt - for example &quot;How old are you&quot;</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *questionValue</Declaration>
+			
+			
+			<Anchor>//api/name/questionValue</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/questionValue</TokenIdentifier>
+			<Abstract type="html">Question Prompt - for example &quot;How old are you&quot;</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *questionValue</Declaration>
+			
+			
+			<Anchor>//api/name/questionValue</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMQuestionResponse/questionValue</TokenIdentifier>
+			<Abstract type="html">Question Prompt - for example &quot;How old are you&quot;</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *questionValue</Declaration>
+			
+			
+			<Anchor>//api/name/questionValue</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/setAnswers:</TokenIdentifier>
+			<Abstract type="html">Array of SMAnswerResponse objects representing the
+respondent&apos;s answer to this question</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *answers</Declaration>
+			
+			
+			<Anchor>//api/name/answers</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMQuestionResponse/answers</TokenIdentifier>
+			<Abstract type="html">Array of SMAnswerResponse objects representing the
+respondent&apos;s answer to this question</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *answers</Declaration>
+			
+			
+			<Anchor>//api/name/answers</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMQuestionResponse/answers</TokenIdentifier>
+			<Abstract type="html">Array of SMAnswerResponse objects representing the
+respondent&apos;s answer to this question</Abstract>
+			<DeclaredIn>SMQuestionResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *answers</Declaration>
+			
+			
+			<Anchor>//api/name/answers</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

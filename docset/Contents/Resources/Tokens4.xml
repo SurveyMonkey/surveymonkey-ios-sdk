@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SMRespondent.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SMRespondent</TokenIdentifier>
+			<Abstract type="html">The SMRespondent object represents a single survey respondent and is returned when a user successfully ends a survey.</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/setCompletionStatus:</TokenIdentifier>
+			<Abstract type="html">Denotes whether respondent has gone through all pages.  If they&apos;ve only gone
+through a subset of pages, completionStatus will be SMCompletionStatusPartiallyComplete</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) SMCompletionStatus completionStatus</Declaration>
+			
+			
+			<Anchor>//api/name/completionStatus</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/completionStatus</TokenIdentifier>
+			<Abstract type="html">Denotes whether respondent has gone through all pages.  If they&apos;ve only gone
+through a subset of pages, completionStatus will be SMCompletionStatusPartiallyComplete</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) SMCompletionStatus completionStatus</Declaration>
+			
+			
+			<Anchor>//api/name/completionStatus</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMRespondent/completionStatus</TokenIdentifier>
+			<Abstract type="html">Denotes whether respondent has gone through all pages.  If they&apos;ve only gone
+through a subset of pages, completionStatus will be SMCompletionStatusPartiallyComplete</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) SMCompletionStatus completionStatus</Declaration>
+			
+			
+			<Anchor>//api/name/completionStatus</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/setDateModified:</TokenIdentifier>
+			<Abstract type="html">Date respondent last updated their response</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDate *dateModified</Declaration>
+			
+			
+			<Anchor>//api/name/dateModified</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/dateModified</TokenIdentifier>
+			<Abstract type="html">Date respondent last updated their response</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDate *dateModified</Declaration>
+			
+			
+			<Anchor>//api/name/dateModified</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMRespondent/dateModified</TokenIdentifier>
+			<Abstract type="html">Date respondent last updated their response</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDate *dateModified</Declaration>
+			
+			
+			<Anchor>//api/name/dateModified</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/setDateStarted:</TokenIdentifier>
+			<Abstract type="html">Date on which respondent started survey (when respondent was created)</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDate *dateStarted</Declaration>
+			
+			
+			<Anchor>//api/name/dateStarted</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/dateStarted</TokenIdentifier>
+			<Abstract type="html">Date on which respondent started survey (when respondent was created)</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDate *dateStarted</Declaration>
+			
+			
+			<Anchor>//api/name/dateStarted</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMRespondent/dateStarted</TokenIdentifier>
+			<Abstract type="html">Date on which respondent started survey (when respondent was created)</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDate *dateStarted</Declaration>
+			
+			
+			<Anchor>//api/name/dateStarted</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/setRespondentID:</TokenIdentifier>
+			<Abstract type="html">ID for respondent</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *respondentID</Declaration>
+			
+			
+			<Anchor>//api/name/respondentID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/respondentID</TokenIdentifier>
+			<Abstract type="html">ID for respondent</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *respondentID</Declaration>
+			
+			
+			<Anchor>//api/name/respondentID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMRespondent/respondentID</TokenIdentifier>
+			<Abstract type="html">ID for respondent</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *respondentID</Declaration>
+			
+			
+			<Anchor>//api/name/respondentID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/setQuestionResponses:</TokenIdentifier>
+			<Abstract type="html">Array of SMQuestionResponse objects representing this respondent&apos;s response
+to the survey</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *questionResponses</Declaration>
+			
+			
+			<Anchor>//api/name/questionResponses</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMRespondent/questionResponses</TokenIdentifier>
+			<Abstract type="html">Array of SMQuestionResponse objects representing this respondent&apos;s response
+to the survey</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *questionResponses</Declaration>
+			
+			
+			<Anchor>//api/name/questionResponses</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMRespondent/questionResponses</TokenIdentifier>
+			<Abstract type="html">Array of SMQuestionResponse objects representing this respondent&apos;s response
+to the survey</Abstract>
+			<DeclaredIn>SMRespondent.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *questionResponses</Declaration>
+			
+			
+			<Anchor>//api/name/questionResponses</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

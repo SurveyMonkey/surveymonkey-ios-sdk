@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SMAnswerResponse.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SMAnswerResponse</TokenIdentifier>
+			<Abstract type="html">The SMAnswerResponse object represents a single answer to a survey question. A single survey question can have multiple SMAnswerResponse objects associated with it.</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setTextResponse:</TokenIdentifier>
+			<Abstract type="html">Text response string</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *textResponse</Declaration>
+			
+			
+			<Anchor>//api/name/textResponse</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/textResponse</TokenIdentifier>
+			<Abstract type="html">Text response string</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *textResponse</Declaration>
+			
+			
+			<Anchor>//api/name/textResponse</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/textResponse</TokenIdentifier>
+			<Abstract type="html">Text response string</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *textResponse</Declaration>
+			
+			
+			<Anchor>//api/name/textResponse</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setRowID:</TokenIdentifier>
+			<Abstract type="html">ID of row answered</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rowID</Declaration>
+			
+			
+			<Anchor>//api/name/rowID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/rowID</TokenIdentifier>
+			<Abstract type="html">ID of row answered</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rowID</Declaration>
+			
+			
+			<Anchor>//api/name/rowID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/rowID</TokenIdentifier>
+			<Abstract type="html">ID of row answered</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rowID</Declaration>
+			
+			
+			<Anchor>//api/name/rowID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setRowIndex:</TokenIdentifier>
+			<Abstract type="html">Index of row in question&apos;s design</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger rowIndex</Declaration>
+			
+			
+			<Anchor>//api/name/rowIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/rowIndex</TokenIdentifier>
+			<Abstract type="html">Index of row in question&apos;s design</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger rowIndex</Declaration>
+			
+			
+			<Anchor>//api/name/rowIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/rowIndex</TokenIdentifier>
+			<Abstract type="html">Index of row in question&apos;s design</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger rowIndex</Declaration>
+			
+			
+			<Anchor>//api/name/rowIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setRowValue:</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this row in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rowValue</Declaration>
+			
+			
+			<Anchor>//api/name/rowValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/rowValue</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this row in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rowValue</Declaration>
+			
+			
+			<Anchor>//api/name/rowValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/rowValue</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this row in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rowValue</Declaration>
+			
+			
+			<Anchor>//api/name/rowValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setColumnID:</TokenIdentifier>
+			<Abstract type="html">ID of column answered</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnID</Declaration>
+			
+			
+			<Anchor>//api/name/columnID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/columnID</TokenIdentifier>
+			<Abstract type="html">ID of column answered</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnID</Declaration>
+			
+			
+			<Anchor>//api/name/columnID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/columnID</TokenIdentifier>
+			<Abstract type="html">ID of column answered</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnID</Declaration>
+			
+			
+			<Anchor>//api/name/columnID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setColumnIndex:</TokenIdentifier>
+			<Abstract type="html">Index of column in question&apos;s design (going left to right)</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger columnIndex</Declaration>
+			
+			
+			<Anchor>//api/name/columnIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/columnIndex</TokenIdentifier>
+			<Abstract type="html">Index of column in question&apos;s design (going left to right)</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger columnIndex</Declaration>
+			
+			
+			<Anchor>//api/name/columnIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/columnIndex</TokenIdentifier>
+			<Abstract type="html">Index of column in question&apos;s design (going left to right)</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger columnIndex</Declaration>
+			
+			
+			<Anchor>//api/name/columnIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setColumnValue:</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this column in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnValue</Declaration>
+			
+			
+			<Anchor>//api/name/columnValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/columnValue</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this column in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnValue</Declaration>
+			
+			
+			<Anchor>//api/name/columnValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/columnValue</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this column in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnValue</Declaration>
+			
+			
+			<Anchor>//api/name/columnValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setColumnDropdownID:</TokenIdentifier>
+			<Abstract type="html">ID of choice in a column&apos;s dropdown</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnDropdownID</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/columnDropdownID</TokenIdentifier>
+			<Abstract type="html">ID of choice in a column&apos;s dropdown</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnDropdownID</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/columnDropdownID</TokenIdentifier>
+			<Abstract type="html">ID of choice in a column&apos;s dropdown</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnDropdownID</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownID</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setColumnDropdownIndex:</TokenIdentifier>
+			<Abstract type="html">Index of choice in a column&apos;s dropdown</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger columnDropdownIndex</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/columnDropdownIndex</TokenIdentifier>
+			<Abstract type="html">Index of choice in a column&apos;s dropdown</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger columnDropdownIndex</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/columnDropdownIndex</TokenIdentifier>
+			<Abstract type="html">Index of choice in a column&apos;s dropdown</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger columnDropdownIndex</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownIndex</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/setColumnDropdownValue:</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this column&apos;s dropdown in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnDropdownValue</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SMAnswerResponse/columnDropdownValue</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this column&apos;s dropdown in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnDropdownValue</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SMAnswerResponse/columnDropdownValue</TokenIdentifier>
+			<Abstract type="html">User-facing text representing this column&apos;s dropdown in the survey</Abstract>
+			<DeclaredIn>SMAnswerResponse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *columnDropdownValue</Declaration>
+			
+			
+			<Anchor>//api/name/columnDropdownValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

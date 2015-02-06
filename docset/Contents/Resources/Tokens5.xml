@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SMFeedbackDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SMFeedbackDelegate</TokenIdentifier>
+			<Abstract type="html">The FeedbackDelegate protocol defines the methods a delegate of a SMFeedbackViewController object should implement.
+The delegate responds to the event of a respondent ending a survey-taking session. All of the methods defined in this protocol are optional.</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SMFeedbackDelegate/respondentDidEndSurvey:error:</TokenIdentifier>
+			<Abstract type="html">  Sent to the delegate when a respondent ends a survey-taking session.</Abstract>
+			<DeclaredIn>SMFeedbackViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)respondentDidEndSurvey:(SMRespondent *)respondent error:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>respondent</Name>
+					<Abstract type="html">The respondent object returned when a survey is ended.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error object returned (see error codes below) -- will be nil if survey was completed successfully.
+
+
+#Server Error Codes
+
+  | Error                              |Code| Description                                                                               |
+  |------------------------------------|:--:|:------------------------------------------------------------------------------------------|
+  | ERRORCODETOKEN                   | 1  | Could not retrieve your respondent. Be sure you&apos;re using an SDK Collector.                |
+  | ERRORCODEBAD_CONNECTION          | 2  | There was an error connecting to the server.                                              |
+  | ERRORCODERESPONSEPARSEFAILED   | 3  | There was an error parsing the response from the server.                                  |
+  | ERRORCODECOLLECTOR_CLOSED        | 4  | The collector for this survey has been closed.                                            |
+  | ERRORCODERETRIEVING_RESPONSE     | 5  | There was a problem retrieving the user&apos;s response to this survey.                        |
+  | ERRORCODESURVEY_DELETED          | 6  | This survey has been deleted.                                                             |
+  | ERRORCODERESPONSELIMITHIT      | 7  | Response limit exceeded for your plan. Upgrade to access more responses through the SDK.  |
+  | ERRORCODERESPONDENTEXITEDSURVEY| 8  | The user canceled out of the survey.                                                      |
+  | ERRORCODENONEXISTENT_LINK        | 9  | Custom link no longer exists.                                                             |
+  | ERRORCODEINTERNALSERVERERROR   | 10 | Internal server error                                                                     |
+
+#Client Error Codes
+
+| Error                              |Code| Description                                                                               |
+|------------------------------------|:--:|:------------------------------------------------------------------------------------------|
+| ERRORCODEUSER_CANCELED           |  1 | The user canceled out of the survey.                                                      |</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/respondentDidEndSurvey:error:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
