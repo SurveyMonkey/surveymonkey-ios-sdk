@@ -1,8 +1,8 @@
-## SurveyMonkey Mobile Feedback SDK for iOS
+## SurveyMonkey Feedback SDK for iOS
 
-The SurveyMonkey Mobile Feedback SDK allows app developers to integrate SurveyMonkey surveys and responses into their apps. The SDK allows your users to provide qualitative feedback about their in-app experience and lets your app respond to their feedback on the fly. You can use it to direct your app's biggest fans to the App Store to rate your app, while directing users experiencing bugs to the proper reporting channels. You can even use the SDK to offer promo codes or other incentives to users based on their response to a feedback survey. The SDK allows developers to reshape their users' in-app experience through direct feedback -- and the possibilities are endless.
+The SurveyMonkey Feedback SDK allows app developers to integrate SurveyMonkey surveys and responses into their apps. The SDK allows your users to provide qualitative feedback about their in-app experience and lets your app respond to their feedback on the fly. You can use it to direct your app's biggest fans to the App Store to rate your app, while directing users experiencing bugs to the proper reporting channels. You can even use the SDK to offer promo codes or other incentives to users based on their response to a feedback survey. The SDK allows developers to reshape their users' in-app experience through direct feedback -- and the possibilities are endless.
 
-####Example - A Simple 5-Star Rating Survey 
+####Example - A Simple 5-Star Rating Survey
 <img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/intercept.png  width=220 height=400 />
 <img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/sample_survey.png  width=220 height=400 />
 <img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/positive_feedback.png  width=220 height=400 />
@@ -33,7 +33,7 @@ For a detailed example, take a look at the **Simple Survey** sample project in o
 
 
 ####Important
-Usage of the respondent data returned by the SurveyMonkey Mobile Feedback SDK requires that your class implement <SMFeedbackDelegate> and the `– respondentDidEndSurvey:error:` method therein
+Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that your class implement <SMFeedbackDelegate> and the `– respondentDidEndSurvey:error:` method therein
 
 
 The survey respondent data is returned as an SMSDKResponse. Here's an example implementation of `- respondentDidEndSurvey:error:`:
@@ -73,7 +73,7 @@ _feedbackController.delegate = self;
 ```
 
 ####The Intercept Modal
-To kick off the SurveyMonkey Mobile Feedback SDK Intercept process, call:
+To kick off the SurveyMonkey Feedback SDK Intercept process, call:
 ```objc
 [_feedbackController scheduleInterceptFromViewController:self withAppTitle:{SAMPLE_APP_NAME}];
 ```
