@@ -1,11 +1,13 @@
 ## SurveyMonkey Mobile Feedback SDK for iOS
 
-The SurveyMonkey Mobile Feedback SDK for iOS allows app developers to integrate SurveyMonkey surveys and respondent data into their apps. Checkout our [API reference](http://surveymonkey.github.io/surveymonkey-ios-sdk/) for more information.
+The SurveyMonkey Mobile Feedback SDK allows app developers to integrate SurveyMonkey surveys and responses into their apps. The SDK allows your users to provide qualitative feedback about their in-app experience and lets your app respond to their feedback on the fly. You can use it to direct your app's biggest fans to the App Store to rate your app, while directing users experiencing bugs to the proper reporting channels. You can even use the SDK to offer promo codes or other incentives to users based on their response to a feedback survey. The SDK allows developers to reshape their users' in-app experience through direct feedback -- and the possibilities are endless.
 
-
+####Example - A Simple 5-Star Rating Survey 
 <img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/intercept.png  width=220 height=400 />
 <img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/sample_survey.png  width=220 height=400 />
 <img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/positive_feedback.png  width=220 height=400 />
+
+Checkout our [API reference](http://surveymonkey.github.io/surveymonkey-ios-sdk/) for more information about specific features and classes.
 
 We strive to fix bugs and add new features as quickly as possible. Please watch our Github repo to stay up to date.
 
