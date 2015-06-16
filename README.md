@@ -1,6 +1,6 @@
 ## SurveyMonkey Mobile Feedback SDK for iOS
 
-The SurveyMonkey Mobile Feedback SDK for iOS allows app developers to integrate SurveyMonkey surveys and respondent data into their apps. Checkout our [documentation site](http://surveymonkey.github.io/surveymonkey-ios-sdk/) for more information.
+The SurveyMonkey Mobile Feedback SDK for iOS allows app developers to integrate SurveyMonkey surveys and respondent data into their apps. Checkout our [API reference](http://surveymonkey.github.io/surveymonkey-ios-sdk/) for more information.
 
 We strive to fix bugs and add new features as quickly as possible. Please watch our Github repo to stay up to date.
 
@@ -68,7 +68,7 @@ _feedbackController.delegate = self;
 ####The Intercept Modal
 To kick off the SurveyMonkey Mobile Feedback SDK Intercept process, call:
 ```objc
-[_feedbackController presentInterceptFromViewController:self withAppTitle:{SAMPLE_APP_NAME}];
+[_feedbackController scheduleInterceptFromViewController:self withAppTitle:{SAMPLE_APP_NAME}];
 ```
 from your main activity. This will check to see if the user should be prompted to take your survey (i.e. `if (timeSinceLastSurveyPrompt > maxTimeIntervalBetweenSurveyPrompts)`). The copy of the prompts, as well as the time intervals, can be customized, see our [docs](http://surveymonkey.github.io/surveymonkey-ios-sdk/) for more information.
 
