@@ -10,6 +10,8 @@ git clone https://github.com/SurveyMonkey/surveymonkey-ios-sdk.git
 ```
 Or download the [latest release](https://github.com/SurveyMonkey/surveymonkey-ios-sdk/releases)
 
+*Note:* We'll be adding cocoapods integration when we exit beta in the coming months
+
 ### Integrating with XCode
 
 1. In the project navigation sidebar, right-click on the **Frameworks** group and select **"Add files to [ProjectName]"**
