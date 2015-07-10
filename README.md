@@ -12,7 +12,7 @@ Checkout our [API reference](http://surveymonkey.github.io/surveymonkey-ios-sdk/
 We strive to fix bugs and add new features as quickly as possible. Please watch our Github repo to stay up to date.
 
 ####Sign Up for the Private Beta
-[Here](https://surveymonkey.wufoo.com/forms/k1qq7e6o0h1ijz0/)
+The SDK is currently in Private Beta -- to get on the waiting list: click [Here](https://surveymonkey.wufoo.com/forms/k1qq7e6o0h1ijz0/)
 
 To download the SDK, either clone the SDK
 ```bash
