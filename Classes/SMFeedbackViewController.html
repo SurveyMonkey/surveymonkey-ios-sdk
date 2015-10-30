@@ -50,9 +50,11 @@
 	
 	<option value="//api/name/initWithSurvey:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSurvey:</option>
 	
+	<option value="//api/name/initWithSurvey:andCustomVariables:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSurvey:andCustomVariables:</option>
+	
 	<option value="//api/name/presentFromViewController:animated:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- presentFromViewController:animated:completion:</option>
 	
-	<option value="//api/name/scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:">&nbsp;&nbsp;&nbsp;&nbsp;- scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:</option>
+	<option value="//api/name/scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:">&nbsp;&nbsp;&nbsp;&nbsp;- scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:</option>
 	
 	<option value="//api/name/scheduleInterceptFromViewController:withAppTitle:">&nbsp;&nbsp;&nbsp;&nbsp;- scheduleInterceptFromViewController:withAppTitle:</option>
 	
@@ -98,9 +100,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSurvey:">initWithSurvey:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSurvey:andCustomVariables:">initWithSurvey:andCustomVariables:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentFromViewController:animated:completion:">presentFromViewController:animated:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:">scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:">scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scheduleInterceptFromViewController:withAppTitle:">scheduleInterceptFromViewController:withAppTitle:</a></span></li>
 	
@@ -168,6 +172,12 @@ The <a href="#//api/name/delegate">delegate</a> should conform to the FeedbackDe
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSurvey:andCustomVariables:">&ndash;&nbsp;initWithSurvey:andCustomVariables:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -198,7 +208,7 @@ The <a href="#//api/name/delegate">delegate</a> should conform to the FeedbackDe
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:">&ndash;&nbsp;scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:</a></code>
+		<code><a href="#//api/name/scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:">&ndash;&nbsp;scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:</a></code>
 	</span>
 	
 	
@@ -274,7 +284,7 @@ The <a href="#//api/name/delegate">delegate</a> should conform to the FeedbackDe
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize the feedback view controller with the collectorHash from your Mobile SDK Collector</p>
+		<p>Initialize the feedback view controller with the <a href="#//api/name/collectorHash">collectorHash</a> from your Mobile SDK Collector</p>
 	</div>		
 	
     
@@ -289,6 +299,57 @@ The <a href="#//api/name/delegate">delegate</a> should conform to the FeedbackDe
 		<dl class="argument-def parameter-def">
 			<dt><em>collectorHash</em></dt>
 			<dd><p>The collector hash that points to your Mobile SDK Collector</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SMFeedbackViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSurvey:andCustomVariables:" title="initWithSurvey:andCustomVariables:"></a>
+	<h3 class="subsubtitle method-title">initWithSurvey:andCustomVariables:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>PLATINUM ONLY: Initialize the feedback view controller with the <a href="#//api/name/collectorHash">collectorHash</a> from your Mobile SDK Collector and any custom variables you&rsquo;ve set up in Create</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithSurvey:(NSString *)<em>collectorHash</em> andCustomVariables:(NSDictionary *)<em>customVariables</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>collectorHash</em></dt>
+			<dd><p>The collector hash that points to your Mobile SDK Collector</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>customVariables</em></dt>
+			<dd><p>The dictionary of custom variables you wish to supply along with the user&rsquo;s response to your survey</p></dd>
 		</dl>
 		
 	</div>
@@ -370,8 +431,8 @@ The <a href="#//api/name/delegate">delegate</a> should conform to the FeedbackDe
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:" title="scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:"></a>
-	<h3 class="subsubtitle method-title">scheduleInterceptFromViewController:andAlertTitle:andAlertBody:andAfterInstallInterval:andAfterAcceptInterval:andAfterDeclineInterval:</h3>
+	<a name="//api/name/scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:" title="scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:"></a>
+	<h3 class="subsubtitle method-title">scheduleInterceptFromViewController:alertTitle:alertBody:positiveActionTitle:cancelTitle:afterInstallInterval:afterAcceptInterval:afterDeclineInterval:</h3>
 	
 	
 	
@@ -382,7 +443,7 @@ Supply an alert title and body for the UIAlertView prompt, as well as time inter
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)scheduleInterceptFromViewController:(UIViewController *)<em>viewController</em> andAlertTitle:(NSString *)<em>alertTitle</em> andAlertBody:(NSString *)<em>alertBody</em> andAfterInstallInterval:(double)<em>afterInstallInterval</em> andAfterAcceptInterval:(double)<em>afterAcceptInterval</em> andAfterDeclineInterval:(double)<em>afterDeclineInterval</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)scheduleInterceptFromViewController:(UIViewController *)<em>viewController</em> alertTitle:(NSString *)<em>alertTitle</em> alertBody:(NSString *)<em>alertBody</em> positiveActionTitle:(NSString *)<em>positiveActionTitle</em> cancelTitle:(NSString *)<em>cancelTitle</em> afterInstallInterval:(double)<em>afterInstallInterval</em> afterAcceptInterval:(double)<em>afterAcceptInterval</em> afterDeclineInterval:(double)<em>afterDeclineInterval</em></code></div>
 
     
 	
@@ -402,6 +463,16 @@ Supply an alert title and body for the UIAlertView prompt, as well as time inter
 		<dl class="argument-def parameter-def">
 			<dt><em>alertBody</em></dt>
 			<dd><p>The body of the UIAlertView prompt</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>positiveActionTitle</em></dt>
+			<dd><p>The title of the positive action button on the UIAlertView prompt</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cancelTitle</em></dt>
+			<dd><p>The title of the cancel button on the UIAlertView prompt</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -512,7 +583,7 @@ If the user consents to take the survey, they&rsquo;ll be prompted again in 3 mo
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 SurveyMonkey. All rights reserved. (Last updated: 2015-06-16)</span><br />
+						<p><span class="copyright">&copy; 2015 SurveyMonkey. All rights reserved. (Last updated: 2015-10-30)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</span></p>
 						
