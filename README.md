@@ -21,7 +21,9 @@ Or download the [latest release](https://github.com/SurveyMonkey/surveymonkey-io
 
 
 ### Setting up your SDK Collector
+
 To use the SurveyMonkey Feedback SDK, you must first create a survey on [ SurveyMonkey.com](https://www.surveymonkey.com).
+
 1. Once you have created your SurveyMonkey survey, navigate to the **Collect** tab and select **+ New Collector > SDK** from the menu on the righthand side.
 2. Click **Generate** - The code you generate is your **Survey Hash**, you'll use this to point the SDK to your survey in the steps below.
 
