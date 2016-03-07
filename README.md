@@ -38,20 +38,20 @@ You must create your survey and set up your SDK Collector in [www.surveymonkey.c
 ```objc
 #import <SurveyMonkeyiOSSDK/SurveyMonkeyiOSSDK.h>
 ```
-- Depending on your usage, add a property to your interface:
+2. Depending on your usage, add a property to your interface:
 ```objc
 @property (nonatomic, strong) SMFeedbackViewController * feedbackController;
 ```
-- Initialize the SDK and set its delegate:
+3. Initialize the SDK and set its delegate:
 ```objc
 _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH}];
 _feedbackController.delegate = self;
 ```
-- If you are a Platinum user and want to include custom variables with each survey response, create a flat NSDictionary* with your custom variables and use:
+4. If you are a Platinum user and want to include custom variables with each survey response, create a flat NSDictionary* with your custom variables and use:
 ```objc
 _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH} andCustomVariables:{SAMPLE_CUSTOM_VARIABLES_DICTIONARY}];
 ```
-- **Important**: If your app supports iOS 9, you must add the following lines to your app's .plist file:
+5. **Important**: If your app supports iOS 9, you must add the following lines to your app's .plist file:
 ```html
 <key>NSAppTransportSecurity</key>
 <dict>
