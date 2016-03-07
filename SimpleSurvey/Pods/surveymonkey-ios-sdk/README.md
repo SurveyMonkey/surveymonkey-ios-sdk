@@ -17,32 +17,6 @@ Download the [latest release](https://github.com/SurveyMonkey/surveymonkey-ios-s
 ```bash
 git clone https://github.com/SurveyMonkey/surveymonkey-ios-sdk.git
 ```
-**OR**
-
-##### Install the SDK with CocoaPods
-
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like our SDK in your projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
-##### Podfile
-
-To integrate the SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```objc
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '7.1'
-
-pod 'surveymonkey-ios-sdk', '~> 1.0'
-```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
 
 #### Step 2: Set up your SDK Collector
 You must create your survey and set up your SDK Collector in [www.surveymonkey.com](https://www.surveymonkey.com).
