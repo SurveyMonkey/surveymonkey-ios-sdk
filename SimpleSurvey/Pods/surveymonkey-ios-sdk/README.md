@@ -71,7 +71,7 @@ _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_S
 ```
 
 ##### Important consideration
-Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that your class implement the SMFeedbackDelegate and the ```-respondentDidEndSurvey:error:``` method therein
+Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that you have a **Gold** or **Platinum** account and that your class implement the SMFeedbackDelegate and the ```-respondentDidEndSurvey:error:``` method therein
 
 The survey respondent data is returned as an SMResponse. Here's an example:
 ```objc
