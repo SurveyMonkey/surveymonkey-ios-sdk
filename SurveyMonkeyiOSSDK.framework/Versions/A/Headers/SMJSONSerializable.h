@@ -2,7 +2,7 @@
  * Copyright (C) SurveyMonkey
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 /** Protocol that describes behavior for Json serialization. */
 @protocol SMJSONSerializableProtocol <NSObject>
 
