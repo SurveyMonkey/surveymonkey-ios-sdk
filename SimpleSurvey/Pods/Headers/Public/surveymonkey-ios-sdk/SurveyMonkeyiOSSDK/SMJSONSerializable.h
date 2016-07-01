@@ -1,1 +1,0 @@
-../../../../surveymonkey-ios-sdk/SurveyMonkeyiOSSDK.framework/Versions/A/Headers/SMJSONSerializable.h
