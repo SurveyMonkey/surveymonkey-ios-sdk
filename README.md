@@ -1,195 +1,363 @@
-## SurveyMonkey Feedback SDK for iOS
+## Version 1.1.1
+=======
+**NOTE:** With the release of HockeySDK-Unity-iOS 1.1.0-beta.1 a bug was introduced which lead to the exclusion of the app's Application Support folder from iCloud and iTunes backups.
 
-Want to improve your product and app store ratings? The SurveyMonkey Mobile Feedback SDK gives you all the tools you need to collect user feedback about your in-app experience.
+If you have been using one of the affected versions (1.1.0-beta.1, 1.1.0), please make sure to update to at least version 1.1.1 of our SDK as soon as you can.
 
-<img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/sdk.png />
+## Introduction 
 
-### How It Works
+HockeySDK-Unity-iOS implements support for using HockeyApp in your Unity iOS applications.
 
-1. Log in to SurveyMonkey and create a survey asking users what improvements they want to see and how they’d rate your app
-2. Integrate the survey into your mobile app using our [mobile SDK](http://help.surveymonkey.com/articles/en_US/kb/Mobile-SDK)
-3. Get product feedback in real time and prompt satisfied customers to rate you
+The following features are currently supported:
 
-### Steps To Integrate
+1. **Collect crash reports:** If your app crashes because of your native code, a crash log with the same format as from the Apple Crash Reporter is written to the device's storage. If the user starts the app again, he is asked to submit the crash report to HockeyApp. This works for both beta and live apps, i.e. those submitted to the App Store.
 
-#### Step 1: Download Mobile SDK
-Download the [latest release](https://github.com/SurveyMonkey/surveymonkey-ios-sdk/releases) or clone the SDK.
-```bash
-git clone https://github.com/SurveyMonkey/surveymonkey-ios-sdk.git
-```
-**OR**
+2. **Collect exceptions** The HockeySDK-Unity-iOS can automatically report uncaught managed exceptions comming from your managed code. Just like crashes, those exceptions will be sent on the next app start and are displayed on HockeyApp
 
-##### Install the SDK with CocoaPods
+3. **[NEW] User Metrics** Understand user behavior to improve your app. Track usage through daily and monthly active users. Monitor crash impacted users. Measure customer engagement through session count.
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like our SDK in your projects. You can install it with the following command:
+4. **Update Ad-Hoc / Enterprise apps:** The app will check with HockeyApp if a new version for your Ad-Hoc or Enterprise build is available. If yes, it will show an alert view to the user and let him see the release notes, the version history and start the installation process right away. 
 
-```bash
-$ gem install cocoapods
-```
+5. **Feedback:** Collect feedback from your users from within your app and communicate directly with them using the HockeyApp backend.
 
-##### Podfile
+6. **Authenticate:** Identify and authenticate users of Ad-Hoc or Enterprise builds
 
-To integrate the SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
+This document contains the following sections:
 
-```objc
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '7.1'
+1. [Requirements](#1)
+2. [Installation & Setup](#2)
+3. [Examples](#3)
+4. [Troubleshooting](#4)
+5. [Code of Conduct](#5)
+6. [Contributor License](#6)
+7. [Licenses](#7)
 
-pod 'surveymonkey-ios-sdk', '~> 1.0'
-```
+## <a name="1"></a>Requirements
+* [Changelog](Documentation/Changelog.md)
+* Unity 5.0 or newer (SDK versions with Unity 4 support can be found at the [Unity Asset Store](https://www.assetstore.unity3d.com/en/?gclid=CO) or by switching to the 1.0.4 tag on GitHub).
+* iOS 6.0 or newer.
 
-Then, run the following command:
+## <a name="2"></a>Installation & Setup
 
-```bash
-$ pod install
-```
+The following steps illustrate how to integrate the HockeyAppUnity-iOS plugin:
 
-#### Step 2: Set up your SDK Collector
-You must create your survey and set up your SDK Collector in [www.surveymonkey.com](https://www.surveymonkey.com).
+### 1) Import plugin
+You can either import the plugin [from the Asset Store](https://www.assetstore.unity3d.com/en/#!/content/17757) or download the *.unitypackage* from our [GitHub releases page](https://github.com/bitstadium/HockeySDK-Unity-iOS/releases) and install it by doubleclicking the file. That's it!
 
-1. Once you create your survey, navigate to the **Collect** tab and select **+New Collector > SDK** from the menu on the righthand side
-2. Click **Generate**. The code you generate is your **Survey Hash**, you'll **Copy** this and use it to point the SDK to your survey in the steps below
+In case you've cloned the repo, simply copy the **HockeyAppUnityIOS** folder as well as the **Editor** folder into the **Assets** directory of your Unity project. Both folders are subdirectories of the **Plugin** folder.
 
-<img src=https://raw.githubusercontent.com/SurveyMonkey/surveymonkey-ios-sdk/master/images/sdk_collector.png />
+![alt text](Documentation/01_add_plugin.png  "Add plugin folders")
 
-### Step 3: Importing to XCode
+### <a name="create_game_object"></a>2) Create plugin-GameObject
+Create an empty game object (*GameObject -> Create Empty*) and rename it (*HockeyAppUnityIOS*).
 
-1. In the project navigation sidebar, right-click on the **Frameworks** group and select **"Add files to [ProjectName]"**
-2. Navigate to the **surveymonkey-ios-sdk** directory that is contained in your cloned version of the **surveymonkey-ios-sdk** and select the **SurveyMonkeyiOSSDK.framework** file
-3. Make sure that **"Copy items if necessary"** is checked and all targets that will use the SDK are selected
+![alt text](Documentation/02_add_script.png "Rename gameobject")
 
-### Step 4: Integrate the SurveyMonkey SDK with your app
+Add the **HockeyAppIOS.cs** as a component of your new created gameobject.
 
-1. Import the SDK
-```objc
-#import <SurveyMonkeyiOSSDK/SurveyMonkeyiOSSDK.h>
-```
+![alt text](Documentation/03_add_component.png "Add script as component")
 
-2. Depending on your usage, add a property to your interface:
-```objc
-@property (nonatomic, strong) SMFeedbackViewController * feedbackController;
-```
+Select the game object in the **Hierarchy** pane and fill in some additional informations inside the Inspector window. 
 
-3. Initialize the SDK and set its delegate:
-```objc
-_feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH}];
-_feedbackController.delegate = self;
-```
+* **App ID** - the app ID provided by HockeyApp
+* **Server URL** - if you have your own server instance, please type in its url. <span style="color: red">In most cases this field should be left blank.</span>
+* **Authenticator Type** - an authentication type (see [Authenticating Users on iOS](http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x/authenticating-users-on-ios)). By default **BITAuthenticatorIdentificationTypeAnonymous** will be used.
+* **Secret** - the secret provided by HockeyApp (only for authentication using email address)
+* **Exception Logging** - by checking this option you will get more precise information about exceptions in your Unity scripts
+* **Auto Upload Crashes** -  this option defines if the crash reporting feature should send crash reports automatically without asking the user on the next app start. 
+* **Update Alert** - check this option if users should be informed about app updates from inside your app
+* **User Metrics** - activating this feature will automatically usage data such as daily/monthly unique users and number of sessions per day
 
-4. If you are a Platinum user and want to include custom variables with each survey response, create a flat NSDictionary* with your custom variables and use:
-```objc
-_feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH} andCustomVariables:{SAMPLE_CUSTOM_VARIABLES_DICTIONARY}];
-```
+![alt text](Documentation/04_script_vars.png "Configure script")
 
-5. **Important**: If your app supports iOS 9, you must add the following lines to your app's .plist file:
-```html
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSExceptionDomains</key>
-    <dict>
-      <key>api.surveymonkey.net</key>
-      <dict>
-        <key>NSTemporaryExceptionRequiresForwardSecrecy</key>
-        <false/>
-      </dict>
-    </dict>
-</dict>
-```
+### 3) Configure build settings
 
-##### Important consideration
-Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that you have a **Gold** or **Platinum** account and that your class implement the SMFeedbackDelegate and the ```-respondentDidEndSurvey:error:``` method therein
+You are now ready to build the Xcode project: Select *File -> Build Settings...* and switch to **iOS** in the platform section. Check **Development Build** and **Script Debugging** (see [Build Settings](#build_settings) section).
 
-The survey respondent data is returned as an SMResponse. Here's an example:
-```objc
-- (void)respondentDidEndSurvey:(SMRespondent *)respondent error:(NSError *) error {
-    if (respondent != nil) {
-        SMQuestionResponse * questionResponse = respondent.questionResponses[0];
-        NSString * questionID = questionResponse.questionID;
-        if ([questionID isEqualToString:FEEDBACK_QUESTION_ID]) {
-            SMAnswerResponse * answerResponse = questionResponse.answers[0];
-            NSString * rowID = answerResponse.rowID;
-            if ([rowID isEqualToString:FEEDBACK_FIVE_STARS_ROW_ID] || [rowID isEqualToString:FEEDBACK_FOUR_STARS_ROW_ID]) {
-                [_statusLabel setText:@"Thanks! Please rate us in the app store!"];
-            }
-            else {
-                [_statusLabel setText:@"Thanks for taking our survey. We'll address the issues you encountered as quickly as possible!"];
-            }
-        }
+![alt text](Documentation/06_build_settings.png "Configure build settings")
+
+Open the player settings and make sure that **Bundle identifier** (*Other settings -> Identification*) equals the bundle identifier of the app on HockeyApp (*Manage App -> Basic Data*).
+
+![alt text](Documentation/07_player_settings.png "Configure player settings")
+
+If you want to enable exception logging, please also select *Other settings -> Optimization -> Slow and safe* as well. Otherwise all exceptions will result in an app crash.
+
+Press the **Build** button. You can now build and run your app.
+
+Your app will now send crash reports and user metrics (e.g. daily/monthly unique users, # of sessions per day) to the server without doing any additional work. To see those statistics just visit your app on the portal.
+
+![alt text](Documentation/10_portal_metrics.png "View crashes and user metrics in the portal.")
+
+### <a name="script_modification"></a>4) Modify property list
+
+This step only needs to be done if you want to use an authentication type other than **BITAuthenticatorIdentificationTypeAnonymous**.
+
+![alt text](Documentation/05_plist.png  "Add url scheme tp property list")
+
+1. Open your Info.plist of the exported Xcode project. It is usually stored in the root directory.
+2. Add a new key **URL types** or **CFBundleURLTypes** (if Xcode displays the raw keys).
+3. Change the key of the first child item to **URL Schemes** or **CFBundleURLSchemes**.
+4. Enter **haAPP_ID** as the URL scheme with APP_ID being replaced by the App ID of your app.
+
+## <a name="build_settings"></a>Build Settings
+
+The **Development Build** and **Script Debugging** options affect the exception handling in C#. You will get a crash report in any case, but the data quality differs. It is recommend to enable those options for alpha and beta builds, but to disable them for production.
+
+**Disabled Development Build, Disabled Script Debugging**:
+	
+Apple-style crash report for those exception types that cause a crash.
+
+**Enabled Development Build, Disabled Script Debugging**
+
+	IndexOutOfRangeException: Array index is out of range.
+ 		at (wrapper stelemref) object:stelemref (object,intptr,object)
+ 		at TestUI.OnGUI ()
+ 		
+**Enabled Development Build, Enabled Script Debugging**:
+
+	IndexOutOfRangeException: Array index is out of range.
+ 		at (wrapper stelemref) object:stelemref (object,intptr,object)
+ 		at TestUI.OnGUI () (at /Users/name/Documents/Workspace/HockeySDK-Unity-iOS/ExampleGame/Assets/TestUI/TestUI.cs:73)
+ 		
+## <a name="3"></a>Examples
+
+### Feedback Form
+
+In order to provide your users with a feedback form, just call the following static method: 
+	
+	HockeyAppIOS.ShowFeedbackForm(); 
+	
+### Explicitly check for updates
+
+Usually, the update check happens everytime the app enters the foreground. If you'd like to explicitly trigger this check, please add the following to your code: 
+	
+	HockeyAppIOS.CheckForUpdate(); 
+	
+## <a name="4"></a>Troubleshooting
+
+If you have any problems with compiling the exported xCode projects, please check the following points:
+
+### Libraries group
+
+After exporting your Unity project, your xCode project should now contain the following files:
+
+* **libHockeyAppUnity.a** & **HockeyAppUnityWrapper.m** (*Libraries/HockeyAppUnityIOS/*)
+* **HockeySDKResources.bundle** (*Frameworks/HockeyAppUnityIOS/*)
+
+If not, compiling your project will lead to different errors, e.g.
+
+	Undefined symbols for architecture armv7:
+  	  "_OBJC_CLASS_$_HockeyAppUnity", referenced from:
+      	objc-class-ref in HockeyAppUnityWrapper.o
+      	objc-class-ref in UnityAppController.o
+      	objc-class-ref in UnityAppController+ViewHandling.o
+	ld: symbol(s) not found for architecture armv7
+	clang: error: linker command failed with exit code 1 (use -v to see invocation)
+	
+or
+
+	ld: warning: directory not found for option '-L"/Path/to/project/Libraries"'
+	Undefined symbols for architecture armv7:
+  	  "_HockeyApp_StartHockeyManager", referenced from:
+	      RegisterMonoModules() in RegisterMonoModules.o
+	  "_HockeyApp_ShowFeedbackListView", referenced from:
+	      RegisterMonoModules() in RegisterMonoModules.o
+	  "_HockeyApp_GetBundleIdentifier", referenced from:
+	      RegisterMonoModules() in RegisterMonoModules.o
+	  "_HockeyApp_GetAppVersion", referenced from:
+	      RegisterMonoModules() in RegisterMonoModules.o
+	ld: symbol(s) not found for architecture armv7
+	clang: error: linker command failed with exit code 1 (use -v to see invocation)	
+
+Please note that Unity only copies those files if you target them for iOS within Unity.
+
+#### Authentication type not working
+
+The **info.plist** of your xCode project should contain the key **URL types** with your app ID as value of one of its children (see [Modify Property List](#property_list)).
+
+Furthermore, the following lines of code
+
+	if([HockeyAppUnity handleOpenURL:url sourceApplication:sourceApplication annotation:annotation]){
+        return YES;
     }
-    else {
-      NSLog(@"%@", error.description);
-    }
 
-}
-```
-Look at the [Simple Survey](https://github.com/SurveyMonkey/surveymonkey-ios-sdk/tree/master/SimpleSurvey) sample project in our Github repo for a detailed example.
+should be part of the method
 
-##### The Intercept Modal
-To kick off the SurveyMonkey Feedback SDK Intercept process, call the following from your main activity:
-```objc
-[_feedbackController scheduleInterceptFromViewController:self withAppTitle:{SAMPLE_APP_NAME}];
-```
-This will check to see if the user should be prompted to take your survey (i.e. if (timeSinceLastSurveyPrompt > maxTimeIntervalBetweenSurveyPrompts)).
+	- (BOOL)application:(UIApplication*)application openURL:(NSURL*)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation
 
-You can customize the copy of the prompts, as well as the time intervals. See our [documentation](http://surveymonkey.github.io/surveymonkey-ios-sdk/) for more information about specific features and classes.
+inside the class *Classes/UnityAppController.mm*.
 
-##### Presenting a Survey to the User
-To present a survey for the user to take, call:
-```objc
-[_feedbackController presentFromViewController:self animated:YES completion:nil];
-```
+#### Crash reporting / Feedback form / Update Manager not working
 
-#### Issues and Bugs
-Please submit any issues with the SDK to us via Github issues. We strive to fix bugs as quickly as possible. We plan to add cocoapods integration in the coming months. Watch our Github repo to stay up to date for new features.
+If the project compiles just fine but none of the features seem to work, please check the class *Classes/UI/UnityAppController+ViewHandling.mm*.
 
-#### FAQ
-*What can I use the mobile SDK for?*
+The last line of the method
 
-###### Measure overall satisfaction
-A simple, multiple choice question can help you understand just how satisfied users are with your app. Based on their level of satisfaction, you can tailor the rest of their in-app experience. For example, if a user reports a moderate level of satisfaction, you can ask them a follow-up question to identify the problem and prioritize a solution by your development team.
+	- (void)showGameUI
+	
+should be
 
-###### Conduct real-time product research
-The best way to perform user research is to listen. A product manager can quickly find out which features a user is yearning for, and which features aren’t meeting expectations. Based on the findings, a product team can adjust roadmaps to be more responsive for their growing mobile user base and don’t have to passively wait for an app store review to see what is and isn’t working.
+	[HockeyAppUnity sendViewLoadedMessageToUnity];
 
-*How can I prompt users to give feedback?*
+This might also happen if you forgot to put the app ID inside the script form of the Unity project (see [Create plugin-GameObject](#create_game_object)).
 
-###### Random polling
-You can set up predefined time intervals to prompt for in-app feedback from a random sample of your users. This is referred to as a “scheduled intercept” in the developer documents. For example, you can set the in-app feedback to prompt a user within 3 days after they install or update the app. If the user selects “Give Feedback,” you don’t show the prompt for 3 months. If the user selects “Not Now,” you prompt them again in 3 weeks. The time intervals are completely customizable by the developer.
+## <a name="5"></a>Code of Conduct
 
-###### Event-based triggers
-You can prompt the user for in-app feedback if they visit a certain part of the app or click a specific button. For example, if you notice users dropping out of your checkout screen, you can ask them why in real time. This information can lead to key product insights, such as moving certain fields around to better align with your customers’ priorities.
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-###### Passive feedback
-Many apps have a slide-out menu that allows their users to access a variety of items such as Account, About Us, or Help. At SurveyMonkey, we’ve included Feedback in our slide-out menu to passively prompt users for feedback. You can incorporate this into your own app so users can provide feedback whenever they want.
+## <a name="6"></a>Contributor License
 
-*How can I route my app users to different flows based on their survey response?*
+You must sign a [Contributor License Agreement](https://cla.microsoft.com/) before submitting your pull request. To complete the Contributor License Agreement (CLA), you will need to submit a request via the [form](https://cla.microsoft.com/) and then electronically sign the CLA when you receive the email containing the link to the document. You need to sign the CLA only once to cover submission to any Microsoft OSS project. 
 
-If you have a GOLD plan or higher, you can program your app to route your users into different flows based on their responses to your survey. For example, if a user responds to your in-app feedback survey and gives your app a 5-star rating, your app could take that user down the “5-Star Rating Flow” into the app store to rate your app. You could also take a user down the “Needs Improvement Flow” to the help center in your app.
+## <a name="7"></a>Licenses
 
-*Is the mobile SDK free?*
+The Hockey SDK is provided under the following license:
 
-Yes, the mobile SDK can be incorporated into your app with any SurveyMonkey plan. However, developers must upgrade to GOLD or higher to take actions based on responses to survey questions (prompt users who report high satisfaction with your app to review it).
+    The MIT License
+    Copyright (c) Microsoft Corporation.
+    All rights reserved.
 
-[Custom variables](http://help.surveymonkey.com/articles/en_US/kb/What-are-custom-variables-and-how-do-I-use-them) are available in PLATINUM plans.
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following
+    conditions:
 
-*How can I style the survey?  How will it look on a mobile device?*
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
 
-As with all SurveyMonkey surveys, you have the ability to customize the look and feel of your survey to match your mobile app.  The survey page is mobile responsive so you can use the SDK on both smartphone and tablet devices.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
 
-*Can I make edits once a survey is deployed?*
+Except as noted below, PLCrashReporter 
+is provided under the following license:
 
-You can edit a survey after you send it out. If the survey doesn’t have any responses, you can fully edit the survey. If the survey is live and already has responses, your editing options are [limited](http://help.surveymonkey.com/articles/en_US/kb/Am-I-able-to-edit-a-live-survey-and-does-this-change-the-link). Edits you make to the survey go live as soon as you save them, so make sure you preview your work beforehand. You won’t need to submit a new version of your app to the app store to reflect any updates, and your survey hash will remain the same.
+    Copyright (c) 2008 - 2015 Plausible Labs Cooperative, Inc.
+    Copyright (c) 2012 - 2015 HockeyApp, Bit Stadium GmbH.
+    All rights reserved.
 
-If you close or delete a collector in SurveyMonkey, your users will not see a prompt for in-app feedback.
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following
+    conditions:
 
-*Is the survey native to the app?*
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
 
-Yes, although the SDK requires an internet connection to load the survey. If the user’s device is offline he/she will not be prompted to take the survey.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
 
-*I have an app on Android and iOS. How many mobile collectors do I need to create?*
+The protobuf-c library, as well as the PLCrashLogWriterEncoding.c
+file are licensed as follows:
 
-You can create one survey and set up multiple collectors to help you track where responses are coming from, i.e. one for your Android app and one for your iOS app.
+    Copyright 2008, Dave Benson.
 
-*How do I localize the survey for various locations?*
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with
+    the License. You may obtain a copy of the License
+    at http://www.apache.org/licenses/LICENSE-2.0 Unless
+    required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on
+    an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied. See the License for the
+    specific language governing permissions and limitations
+    under the License.
 
-We recommend creating multiple [surveys](http://help.surveymonkey.com/articles/en_US/kb/How-can-I-create-two-surveys-and-direct-respondents-to-one-version), with the survey translated into different languages.
+TTTAttributedLabel is licensed as follows:
+
+    Copyright (c) 2011 Mattt Thompson (http://mattt.me/)
+    
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following
+    conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+
+SFHFKeychainUtils is licensed as follows:
+
+    Created by Buzz Andersen on 10/20/08.
+    Based partly on code by Jonathan Wight, Jon Crosby, and Mike Malone.
+    Copyright 2008 Sci-Fi Hi-Fi. All rights reserved.
+    
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following
+    conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+
+GZIP is licensed as follow:
+    
+    Created by Nick Lockwood on 03/06/2012.
+    Copyright (C) 2012 Charcoal Design
+    
+    Distributed under the permissive zlib License
+    Get the latest version from here:
+    
+    https://github.com/nicklockwood/GZIP
+    
+    This software is provided 'as-is', without any express or implied
+    warranty.  In no event will the authors be held liable for any damages
+    arising from the use of this software.
+    
+    Permission is granted to anyone to use this software for any purpose,
+    including commercial applications, and to alter it and redistribute it
+    freely, subject to the following restrictions:
+    
+    1. The origin of this software must not be misrepresented; you must not
+    claim that you wrote the original software. If you use this software
+    in a product, an acknowledgment in the product documentation would be
+    appreciated but is not required.
+    
+    2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+    
+    3. This notice may not be removed or altered from any source distribution.
