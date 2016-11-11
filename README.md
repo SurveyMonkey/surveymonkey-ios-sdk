@@ -81,21 +81,6 @@ _feedbackController.delegate = self;
 _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH} andCustomVariables:{SAMPLE_CUSTOM_VARIABLES_DICTIONARY}];
 ```
 
-5. **Important**: If your app supports iOS 9, you must add the following lines to your app's .plist file:
-```html
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSExceptionDomains</key>
-    <dict>
-      <key>api.surveymonkey.net</key>
-      <dict>
-        <key>NSTemporaryExceptionRequiresForwardSecrecy</key>
-        <false/>
-      </dict>
-    </dict>
-</dict>
-```
-
 ##### Important consideration
 Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that you have a **Gold** or **Platinum** account and that your class implement the SMFeedbackDelegate and the ```-respondentDidEndSurvey:error:``` method therein
 
