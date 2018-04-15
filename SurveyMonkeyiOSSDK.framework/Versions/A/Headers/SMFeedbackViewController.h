@@ -3,6 +3,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 #import "SMRespondent.h"
 #define GIVE_FEEDBACK NSLocalizedString(@"Give Feedback", @"Title for primary action button for intercept UIAlertView")
 #define NOT_NOW NSLocalizedString(@"Not Now", @"Title for negative action button for intercept UIAlertView")

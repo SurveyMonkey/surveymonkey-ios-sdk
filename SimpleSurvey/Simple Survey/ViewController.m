@@ -61,6 +61,7 @@
          * Handle error returned when a response is not successfully collected
          */
     }
+    self.feedbackController = nil;
     
 }
 
