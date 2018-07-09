@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "surveymonkey-ios-sdk"
-  s.version          = "2.0.1"
+  s.version          = "2.0.2"
   s.summary          = "The SurveyMonkey Mobile Feedback SDK for iOS"
   s.homepage         = "https://github.com/SurveyMonkey/surveymonkey-ios-sdk"
   s.license          = 'MIT'
