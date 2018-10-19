@@ -82,7 +82,7 @@ _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_S
 ```
 
 ##### Important consideration
-Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that you have a **Gold** or **Platinum** account and that your class implement the SMFeedbackDelegate and the ```-respondentDidEndSurvey:error:``` method therein
+Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that you have a **Advantage** account or higher and that your class implement the SMFeedbackDelegate and the ```-respondentDidEndSurvey:error:``` method therein
 
 The survey respondent data is returned as an SMResponse. Here's an example:
 ```objc
@@ -149,11 +149,11 @@ Many apps have a slide-out menu that allows their users to access a variety of i
 
 *How can I route my app users to different flows based on their survey response?*
 
-If you have a GOLD plan or higher, you can program your app to route your users into different flows based on their responses to your survey. For example, if a user responds to your in-app feedback survey and gives your app a 5-star rating, your app could take that user down the “5-Star Rating Flow” into the app store to rate your app. You could also take a user down the “Needs Improvement Flow” to the help center in your app.
+If you have an ADVANTAGE plan or higher, you can program your app to route your users into different flows based on their responses to your survey. For example, if a user responds to your in-app feedback survey and gives your app a 5-star rating, your app could take that user down the “5-Star Rating Flow” into the app store to rate your app. You could also take a user down the “Needs Improvement Flow” to the help center in your app.
 
 *Is the mobile SDK free?*
 
-Yes, the mobile SDK can be incorporated into your app with any SurveyMonkey plan. However, developers must upgrade to GOLD or higher to take actions based on responses to survey questions (prompt users who report high satisfaction with your app to review it).
+Yes, the mobile SDK can be incorporated into your app with any SurveyMonkey plan. However, developers must upgrade to ADVANTAGE or higher to take actions based on responses to survey questions (prompt users who report high satisfaction with your app to review it).
 
 [Custom variables](http://help.surveymonkey.com/articles/en_US/kb/What-are-custom-variables-and-how-do-I-use-them) are available in PLATINUM plans.
 
