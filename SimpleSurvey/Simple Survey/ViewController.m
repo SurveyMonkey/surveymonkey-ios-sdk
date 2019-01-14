@@ -3,7 +3,7 @@
  */
 
 #import "ViewController.h"
-#import <surveymonkey-ios-sdk/SurveyMonkeyiOSSDK/SurveyMonkeyiOSSDK.h>
+#import <SurveyMonkeyiOSSDK/SurveyMonkeyiOSSDK.h>
 
 #define FEEDBACK_QUESTION_ID @"813797519"
 #define FEEDBACK_FIVE_STARS_ROW_ID @"9082377273"
