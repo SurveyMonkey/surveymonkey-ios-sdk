@@ -16,7 +16,6 @@
  */
 @protocol SMFeedbackDelegate <NSObject>
 
-@optional
 /** @name Responding to Events */
 
 
