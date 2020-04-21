@@ -11,8 +11,8 @@
 #define SAMPLE_APP @"Sample App"
 #define SURVEY_HASH @"LBQK27G"
 
-//Set to Angry Birds -- change to your app
-#define APP_ID @"343200656"
+//Set to Angry Birds 2 -- change to your app
+#define APP_ID @"880047117"
 
 @interface ViewController () <SMFeedbackDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) SMFeedbackViewController * feedbackController;
@@ -25,20 +25,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /*
-     * Initialize your SMFeedbackViewController like this, pass the survey code from your Mobile SDK Collector on SurveyMonkey.com
-     */
-    _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:SURVEY_HASH];
-    /*
-     * Setting the feedback controller's delegate allows you to detect when a user has completed your survey and to
-     * capture and consume their response in the form of an SMRespondent object
-     */
-    _feedbackController.delegate = self;
+    [self getFeedbackController];
     [[UINavigationBar appearance] setTintColor:[UIColor greenColor]];
     [_feedbackController scheduleInterceptFromViewController:self withAppTitle:SAMPLE_APP];
 }
+
 - (IBAction)didTapTakeSurvey:(id)sender {
-    [_feedbackController presentFromViewController:self animated:YES completion:nil];
+    SMFeedbackViewController *feedbackViewController = [self getFeedbackController];
+    [feedbackViewController presentFromViewController:self animated:YES completion:nil];
+}
+
+- (SMFeedbackViewController *)getFeedbackController {
+    if (_feedbackController == nil) {
+        /*
+         * Initialize your SMFeedbackViewController like this, pass the survey code from your Mobile SDK Collector on SurveyMonkey.com
+         */
+        _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:SURVEY_HASH];
+        /*
+         * Setting the feedback controller's delegate allows you to detect when a user has completed your survey and to
+         * capture and consume their response in the form of an SMRespondent object
+         */
+        _feedbackController.delegate = self;
+    }
+    return _feedbackController;
 }
 
 - (void)respondentDidEndSurvey:(SMRespondent *)respondent error:(NSError *) error {
