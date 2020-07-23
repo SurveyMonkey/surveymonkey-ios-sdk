@@ -61,30 +61,53 @@ You must create your survey and set up your SDK Collector in [www.surveymonkey.c
 ### Step 4: Integrate the SurveyMonkey SDK with your app
 
 1. Import the SDK
+ObjC:
 ```objc
 #import <SurveyMonkeyiOSSDK/SurveyMonkeyiOSSDK.h>
 ```
+Swift:
+```swift
+import SurveyMonkeyiOSSDK
+```
 
 2. Depending on your usage, add a property to your interface:
+ObjC:
 ```objc
 @property (nonatomic, strong) SMFeedbackViewController * feedbackController;
 ```
+Swift:
+```swift
+var surveyController: SMFeedbackViewController!
+```
 
 3. Initialize the SDK and set its delegate:
+ObjC:
 ```objc
 _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH}];
 _feedbackController.delegate = self;
 ```
+Swift:
+```swift
+self.surveyController = SMFeedbackViewController(survey: {SAMPLE_SURVEY_HASH})
+self.surveyController.delegate = self
+```
 
 4. If you are a Platinum user and want to include custom variables with each survey response, create a flat NSDictionary* with your custom variables and use:
+ObjC:
 ```objc
 _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH} andCustomVariables:{SAMPLE_CUSTOM_VARIABLES_DICTIONARY}];
+```
+Swift:
+```swift
+self.surveyController = SMFeedbackViewController(survey: {SAMPLE_SURVEY_HASH}, andCustomVariables: {SAMPLE_CUSTOM_VARIABLES_DICTIONARY})
+self.surveyController.delegate = self
 ```
 
 ##### Important consideration
 Usage of the respondent data returned by the SurveyMonkey Feedback SDK requires that you have a **Advantage** account or higher and that your class implement the SMFeedbackDelegate and the ```-respondentDidEndSurvey:error:``` method therein
 
 The survey respondent data is returned as an SMResponse. Here's an example:
+ObjC:
 ```objc
 - (void)respondentDidEndSurvey:(SMRespondent *)respondent error:(NSError *) error {
     if (respondent != nil) {
@@ -107,12 +130,25 @@ The survey respondent data is returned as an SMResponse. Here's an example:
 
 }
 ```
+Swift:
+```swift
+extension ViewController: SMFeedbackDelegate {
+    func respondentDidEndSurvey(_ respondent: SMRespondent!, error _: Error!) {
+        // TODO
+    }
+}
+```
 Look at the [Simple Survey](https://github.com/SurveyMonkey/surveymonkey-ios-sdk/tree/master/SimpleSurvey) sample project in our Github repo for a detailed example.
 
 ##### The Intercept Modal
 To kick off the SurveyMonkey Feedback SDK Intercept process, call the following from your main activity:
+ObjC:
 ```objc
 [_feedbackController scheduleInterceptFromViewController:self withAppTitle:{SAMPLE_APP_NAME}];
+```
+Swift:
+```swift
+self.surveyController.scheduleIntercept(from: self, withAppTitle: {SAMPLE_APP_NAME})
 ```
 This will check to see if the user should be prompted to take your survey (i.e. if (timeSinceLastSurveyPrompt > maxTimeIntervalBetweenSurveyPrompts)).
 
@@ -120,8 +156,13 @@ You can customize the copy of the prompts, as well as the time intervals. See ou
 
 ##### Presenting a Survey to the User
 To present a survey for the user to take, call:
+ObjC:
 ```objc
 [_feedbackController presentFromViewController:self animated:YES completion:nil];
+```
+Swift:
+```swift
+self.surveyController.present(from: self, animated: true, completion: nil)
 ```
 
 #### Issues and Bugs
