@@ -14,7 +14,7 @@
 //Set to Angry Birds 2 -- change to your app
 #define APP_ID @"880047117"
 
-@interface ViewController () <SMFeedbackDelegate, UIAlertViewDelegate>
+@interface ViewController () <SMFeedbackDelegate>
 @property (nonatomic, strong) SMFeedbackViewController * feedbackController;
 @property (weak, nonatomic) IBOutlet UIButton *takeSurveyButton;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
@@ -74,29 +74,38 @@
     
 }
 
-#pragma mark - UIAlertViewDelegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 0)
-    {
-    }
-    else if(buttonIndex == 1)
-    {
-        NSString *appStoreURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@?mt=8", APP_ID];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreURL]];
-    }
-}
-
 - (void) showAlertWithBody:(NSString *)body hasRateButton:(BOOL)hasRateButton {
-    UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:NSLocalizedString(@"Thanks for your feedback!", @"Heading for feedback prompt")
-                                                     message:body
-                                                    delegate:self
-                                           cancelButtonTitle: NSLocalizedString(@"Cancel", @"Title of cancel button on app store rating prompt")
-                                           otherButtonTitles: nil];
+    
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Thanks for your feedback!", @"Heading for feedback prompt")
+                                         message:body
+                                         preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* cancel = [UIAlertAction
+                        actionWithTitle:NSLocalizedString(@"Cancel", @"Title of cancel button on app store rating prompt")
+                        style:UIAlertActionStyleCancel
+                        handler:^(UIAlertAction * action)
+                        {
+                            // Respond to cancel button press.
+                        }];
+    
+    UIAlertAction* rate = [UIAlertAction
+                    actionWithTitle:NSLocalizedString(@"Rate Us", @"Title of rate us button on app store rating prompt")
+                    style:UIAlertActionStyleDefault
+                    handler:^(UIAlertAction * action)
+                    {
+                        // Respond to rate button press.
+                        // (Note: This url will not open on a simulator. It must be run on a physical device.)
+                        NSString *appStoreURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/apple-store/id%@", APP_ID];
+                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreURL] options:@{} completionHandler:nil];
+                    }];
+    
+    [alertController addAction: cancel];
+    
     if (hasRateButton) {
-        [alert addButtonWithTitle:NSLocalizedString(@"Rate Us", @"Title of rate us button on app store rating prompt")];
+        [alertController addAction: rate];
     }
-    [alert show];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end
