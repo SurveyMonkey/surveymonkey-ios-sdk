@@ -5,10 +5,10 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 #import "SMRespondent.h"
-#define GIVE_FEEDBACK NSLocalizedString(@"Give Feedback", @"Title for primary action button for intercept UIAlertView")
-#define NOT_NOW NSLocalizedString(@"Not Now", @"Title for negative action button for intercept UIAlertView")
-#define DEFAULT_ALERT_TITLE NSLocalizedString(@"Enjoying the %@ app?", @"Title for intercept UIAlertView")
-#define DEFAULT_ALERT_BODY NSLocalizedString(@"Take our quick feedback survey and let us know how we're doing.", @"Body for intercept UIAlertView")
+#define GIVE_FEEDBACK NSLocalizedString(@"Give Feedback", @"Title for primary action button for intercept UIAlertController")
+#define NOT_NOW NSLocalizedString(@"Not Now", @"Title for negative action button for intercept UIAlertController")
+#define DEFAULT_ALERT_TITLE NSLocalizedString(@"Enjoying the %@ app?", @"Title for intercept UIAlertController")
+#define DEFAULT_ALERT_BODY NSLocalizedString(@"Take our quick feedback survey and let us know how we're doing.", @"Body for intercept UIAlertController")
 
 /**
  *  The FeedbackDelegate protocol defines the methods a delegate of a SMFeedbackViewController object should implement.
@@ -97,24 +97,24 @@
 @property (nonatomic, strong) UIColor * cancelButtonTintColor;
 
 /**
- *  Display the intercept UIAlertView to the user - asking them to give feedback on your app.
- *  By default, the UIAlertView prompt will display 3 days after app install. If the user declines to take the survey, they will be prompted again in 3 weeks.
+ *  Display the intercept UIAlertController to the user - asking them to give feedback on your app.
+ *  By default, the UIAlertController prompt will display 3 days after app install. If the user declines to take the survey, they will be prompted again in 3 weeks.
  *  If the user consents to take the survey, they'll be prompted again in 3 months.
  *
  *  @param viewController The view controller from which to launch the SMFeedbackViewController
- *  @param appTitle The title of your app -- used in the title of the UIAlertView (e.g. Are you enjoying the [App Title] app?)
+ *  @param appTitle The title of your app -- used in the title of the UIAlertController (e.g. Are you enjoying the [App Title] app?)
  */
 -(void)scheduleInterceptFromViewController:(UIViewController *)viewController withAppTitle:(NSString *)appTitle;
 
 /**
- *  Display the intercept UIAlertView to the user - asking them to give feedback on your app.
- *  Supply an alert title and body for the UIAlertView prompt, as well as time intervals (in seconds) to wait before displaying the prompt (i.e. after app install, after consents to take the survey, and after the user declines to take the survey)
+ *  Display the intercept UIAlertController to the user - asking them to give feedback on your app.
+ *  Supply an alert title and body for the UIAlertController prompt, as well as time intervals (in seconds) to wait before displaying the prompt (i.e. after app install, after consents to take the survey, and after the user declines to take the survey)
  *
  *  @param viewController The view controller from which to launch the SMFeedbackViewController
- *  @param alertTitle The title of the UIAlertView prompt
- *  @param alertBody The body of the UIAlertView prompt
- *  @param positiveActionTitle The title of the positive action button on the UIAlertView prompt
- *  @param cancelTitle The title of the cancel button on the UIAlertView prompt
+ *  @param alertTitle The title of the UIAlertController prompt
+ *  @param alertBody The body of the UIAlertController prompt
+ *  @param positiveActionTitle The title of the positive action button on the UIAlertController prompt
+ *  @param cancelTitle The title of the cancel button on the UIAlertController prompt
  *  @param afterInstallInterval The amount of time (in seconds) to delay before first prompting the user to give feedback after they install your app.
  *  @param afterAcceptInterval The amount of time (in seconds) to wait before prompting the user to give feedback again after they consent to take your survey.
  *  @param afterDeclineInterval The amount of time (in seconds) to wait before prompting the user to give feedback again after they decline to take your survey.
