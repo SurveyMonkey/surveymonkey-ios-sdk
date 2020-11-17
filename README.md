@@ -76,7 +76,7 @@ _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_S
 _feedbackController.delegate = self;
 ```
 
-4. If you are a Platinum user and want to include custom variables with each survey response, create a flat NSDictionary* with your custom variables and use:
+4. If you have Advantage Plan or higher, and want to include custom variables with each survey response, create a flat NSDictionary* with your custom variables and use:
 ```objc
 _feedbackController = [[SMFeedbackViewController alloc] initWithSurvey:{SAMPLE_SURVEY_HASH} andCustomVariables:{SAMPLE_CUSTOM_VARIABLES_DICTIONARY}];
 ```
@@ -155,7 +155,7 @@ If you have an ADVANTAGE plan or higher, you can program your app to route your 
 
 Yes, the mobile SDK can be incorporated into your app with any SurveyMonkey plan. However, developers must upgrade to ADVANTAGE or higher to take actions based on responses to survey questions (prompt users who report high satisfaction with your app to review it).
 
-[Custom variables](http://help.surveymonkey.com/articles/en_US/kb/What-are-custom-variables-and-how-do-I-use-them) are available in PLATINUM plans.
+[Custom variables](http://help.surveymonkey.com/articles/en_US/kb/What-are-custom-variables-and-how-do-I-use-them) are available in Advantage Plan or higher.
 
 *How can I style the survey?  How will it look on a mobile device?*
 
