@@ -1,0 +1,4 @@
+framework module SurveyMonkeyiOSSDK {
+  umbrella header "SurveyMonkeyiOSSDK.h"
+  module * { export * }
+}
