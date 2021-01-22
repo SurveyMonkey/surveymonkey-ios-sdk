@@ -125,7 +125,7 @@ To present a survey for the user to take, call:
 ```
 
 #### Issues and Bugs
-Please submit any issues with the SDK to us via Github issues. We strive to fix bugs as quickly as possible. We plan to add cocoapods integration in the coming months. Watch our Github repo to stay up to date for new features.
+To report issues with the SDK collector, please contact us at api-support@surveymonkey.com.
 
 #### FAQ
 *What can I use the mobile SDK for?*
