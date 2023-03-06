@@ -35,7 +35,7 @@ To integrate the SDK into your Xcode project using CocoaPods, specify it in your
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 
-pod 'surveymonkey-ios-sdk', '~> 2.1.0'
+pod 'surveymonkey-ios-sdk', '~> 2.1.1'
 ```
 
 Then, run the following command:
