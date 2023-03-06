@@ -1,4 +1,3 @@
-## 2.1.0
+## 2.1.1
 
-- Added support for latest xcode
-- Added spm as dependency manager 
+- fix issue where using pods could case the app no to build
