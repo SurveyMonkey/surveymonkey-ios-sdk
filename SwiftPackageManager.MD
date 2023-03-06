@@ -8,7 +8,7 @@ Package Manager](https://swift.org/package-manager/).
 
 ## Limitations
 
-- Requires Xcode 12.
+- Requires Xcode 14.
 - iOS support is only available.
 
 ## Installation
@@ -23,22 +23,19 @@ Install SurveyMonkey SDK via Swift Package Manager:
 
 Select the SurveyMonkey GitHub repository - `https://github.com/SurveyMonkey/surveymonkey-ios-sdk.git`:
 
-<img width="720" alt="Select Repository" src="https://user-images.githubusercontent.com/42991157/94566514-b61bdb80-026a-11eb-8610-a38ef3a79e8a.png">
 
 Select the version.
 
 Note: Starting with the 2.1.0 release.
 
-<img width="720" alt="Select Version" src="https://user-images.githubusercontent.com/42991157/94566638-dcda1200-026a-11eb-80ee-42e2f97f700a.png">
 
 Choose the SurveyMonkey SDK product to be installed in your app.
 
-<img width="720" alt="Select Usabilla" src="https://user-images.githubusercontent.com/42991157/94566811-14e15500-026b-11eb-8e42-00bd648f2623.png">
 
 ### Alternatively, add SurveyMonkeyiOSSDK to a `Package.swift` manifest
 
 To integrate via a `Package.swift` manifest instead of Xcode, you can add
-Usabilla to your dependencies array of your package with:
+SurveyMonkey SDK to your dependencies array of your package with:
 
 ```
 dependencies: [
