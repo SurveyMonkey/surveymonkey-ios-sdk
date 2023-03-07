@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		306F17151B30E44D0061D2DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306F17141B30E44D0061D2DA /* Images.xcassets */; };
 		306F17181B30E44D0061D2DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306F17161B30E44D0061D2DA /* LaunchScreen.xib */; };
 		306F172E1B30E4800061D2DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306F172D1B30E4800061D2DA /* Main.storyboard */; };
+		F2045ECF29B74A7700EE4083 /* SurveyMonkeyiOSSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F2045ECE29B74A7700EE4083 /* SurveyMonkeyiOSSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2045ECF29B74A7700EE4083 /* SurveyMonkeyiOSSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,7 @@
 			);
 			name = "Simple Survey";
 			packageProductDependencies = (
+				F2045ECE29B74A7700EE4083 /* SurveyMonkeyiOSSDK */,
 			);
 			productName = "Simple Survey";
 			productReference = 306F17041B30E44D0061D2DA /* Simple Survey.app */;
@@ -126,6 +129,7 @@
 			);
 			mainGroup = 306F16FB1B30E44D0061D2DA;
 			packageReferences = (
+				F2045ECD29B74A7700EE4083 /* XCRemoteSwiftPackageReference "surveymonkey-ios-sdk" */,
 			);
 			productRefGroup = 306F17051B30E44D0061D2DA /* Products */;
 			projectDirPath = "";
@@ -270,7 +274,10 @@
 					"$(PROJECT_DIR)/Simple\\ Survey",
 				);
 				INFOPLIST_FILE = "Simple Survey/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -290,7 +297,10 @@
 					"$(PROJECT_DIR)/Simple\\ Survey",
 				);
 				INFOPLIST_FILE = "Simple Survey/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -323,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2045ECD29B74A7700EE4083 /* XCRemoteSwiftPackageReference "surveymonkey-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SurveyMonkey/surveymonkey-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2045ECE29B74A7700EE4083 /* SurveyMonkeyiOSSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2045ECD29B74A7700EE4083 /* XCRemoteSwiftPackageReference "surveymonkey-ios-sdk" */;
+			productName = SurveyMonkeyiOSSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 306F16FC1B30E44D0061D2DA /* Project object */;
 }
