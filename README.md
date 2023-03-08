@@ -44,6 +44,11 @@ Then, run the following command:
 $ pod install
 ```
 
+**OR**
+
+##### Install the SDK with SPM
+Instructions for [Swift Package Manager](https://swift.org/package-manager/) support can be found at [SwiftPackageManager.md](SwiftPackageManager.MD).
+
 #### Step 2: Set up your SDK Collector
 You must create your survey and set up your SDK Collector in [www.surveymonkey.com](https://www.surveymonkey.com).
 
@@ -122,6 +127,78 @@ You can customize the copy of the prompts, as well as the time intervals. See ou
 To present a survey for the user to take, call:
 ```objc
 [_feedbackController presentFromViewController:self animated:YES completion:nil];
+```
+
+##### Please follow below steps for Swift implementation :
+
+```swift
+import UIKit
+import SurveyMonkeyiOSSDK
+
+class SomeViewController: UIViewController, SMFeedbackDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Add your survey hash here
+        guard let sm = SMFeedbackViewController.init(survey: "surveyHash") else { return }
+        sm.present(from: self, animated: true, completion: nil)
+        sm.delegate = self
+    }
+
+    //Called when The survey respondent data is returned as an SMResponse
+    func respondentDidEndSurvey(_ respondent: SMRespondent!, error: Error!) {
+        if respondent != nil { //... }
+    }
+}
+```
+
+##### Please follow below steps for SwiftUI implementation :
+`UIViewControllerRepresentable` instance is used to create and manage a UIViewController object in your SwiftUI interface.
+
+```swift
+import SwiftUI
+import UIKit
+import SurveyMonkeyiOSSDK
+
+struct SMView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> SMViewController {
+        let vc = SMViewController()
+        return vc
+    }
+    func updateUIViewController(_ uiViewController: SMViewController, context: Context) {
+    }
+    typealias UIViewControllerType = SMViewController
+}
+
+class SMViewController: UIViewController, SMFeedbackDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Add your survey hash here
+        guard let sm = SMFeedbackViewController.init(survey: "surveyHash") else { return }
+        sm.present(from: self, animated: true, completion: nil)
+        sm.delegate = self
+    }
+
+    //Called when The survey respondent data is returned as an SMResponse
+    func respondentDidEndSurvey(_ respondent: SMRespondent!, error: Error!) {
+        if respondent != nil { //... }
+    }
+}
+
+ //Called from SWIFTUI view to load the form
+struct ContentView: View {
+    @State private var showingSMForm:Bool = false
+
+    var body: some View {
+        Button("Take Survey", action: {
+            self.showingSMForm = !self.showingSMForm
+        })
+        if(showingSMForm) {
+            SMView()
+        }
+    }
+}
 ```
 
 #### Issues and Bugs
