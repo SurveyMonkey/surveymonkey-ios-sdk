@@ -1,3 +1,7 @@
-## 2.1.1
+## 2.1.2
 
-- fix issue where using pods could case the app no to build
+##vFix
+- Fix crashes related to threading
+
+## Update
+- Added Privacy Manifest
