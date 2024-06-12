@@ -8,7 +8,7 @@ Package Manager](https://swift.org/package-manager/).
 
 ## Limitations
 
-- Requires Xcode 14.
+- Requires Xcode 15.
 - iOS support is only available.
 
 ## Installation
