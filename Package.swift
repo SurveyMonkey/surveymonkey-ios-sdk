@@ -1,15 +1,15 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
-let version = "2.1.2"
-let checksum = "ce2c7e934136ed30f0f15d86d6c0a58ad5433c6da4364f83cd25991175f6e2d0"
+let version = "2.1.3"
+let checksum = "0021221abbb5596076638d39473c35dd9a5f7069321c23895ce0e427584f9f6e"
 let url = "https://github.com/SurveyMonkey/surveymonkey-ios-sdk/releases/download/v\(version)/SurveyMonkeyiOSSDK.zip"
 
 let package = Package(
     name: "SurveyMonkeyiOSSDK",
-    platforms: [.iOS(.v12)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "SurveyMonkeyiOSSDK",

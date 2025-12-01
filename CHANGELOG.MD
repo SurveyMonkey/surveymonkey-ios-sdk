@@ -1,7 +1,4 @@
-## 2.1.2
+## v2.1.3
 
-##vFix
-- Fix crashes related to threading
-
-## Update
-- Added Privacy Manifest
+## Fix
+- Executes UI Action On Main Thread
