@@ -3,13 +3,13 @@
 
 import PackageDescription
 
-let version = "2.1.3"
-let checksum = "0021221abbb5596076638d39473c35dd9a5f7069321c23895ce0e427584f9f6e"
+let version = "2.1.4"
+let checksum = "5aaaef5f9a82b7d07ff6a93066cc420a9f69aefc76e204391945ad4c66da601e"
 let url = "https://github.com/SurveyMonkey/surveymonkey-ios-sdk/releases/download/v\(version)/SurveyMonkeyiOSSDK.zip"
 
 let package = Package(
     name: "SurveyMonkeyiOSSDK",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "SurveyMonkeyiOSSDK",

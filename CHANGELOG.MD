@@ -1,4 +1,4 @@
-## v2.1.3
+## v2.1.4
 
 ## Fix
-- Executes UI Action On Main Thread
+- ios 12 and above support
